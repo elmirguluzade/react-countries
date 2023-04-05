@@ -8,6 +8,11 @@ const Heading = styled.header`
   border-bottom: 1px solid #ccc;
   padding: 0 5%;
   box-shadow: 1px 1px 10px #ccc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
 
   button {
     background-color: white;

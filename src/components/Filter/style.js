@@ -4,8 +4,15 @@ const FilterContainer = styled.div`
   display: flex;
   padding: 0 5%;
   justify-content: space-between;
-  padding-top: 20px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  z-index: 999;
 
   input {
     width: 350px;
@@ -23,7 +30,7 @@ const FilterContainer = styled.div`
     align-items: center;
     height: 100%;
     width: 50px;
-    top: 8px;
+    top: 0;
     font-size: 20px;
   }
 

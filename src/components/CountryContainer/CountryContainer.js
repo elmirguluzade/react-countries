@@ -10,6 +10,12 @@ import axios from "axios";
 const CountryContainer = () => {
   const { states, setState } = useContext(countriesContext);
 
+  const styles = {
+    backgroundColor: "#f3f3f3",
+    minHeight: "80vh",
+    marginTop: "100px",
+  };
+
   // !Paginate
   useEffect(() => {
     setState({ ...states, loading: true });
@@ -56,7 +62,9 @@ const CountryContainer = () => {
   }, [states.searchText, states.filterBy]);
 
   return (
-    <div style={{ backgroundColor: "#f3f3f3", minHeight: "80vh" }}>
+    <div
+      style={styles}
+    >
       <Filter />
       {!states.loading ? <Countries /> : <Loading />}
       <Pagination />
