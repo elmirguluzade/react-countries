@@ -15,6 +15,7 @@ const CountryContainer = styled.div`
     .flag{
         width: 250px;
         height: 150px;
+        cursor: pointer;
     }
 
     img {
@@ -28,6 +29,7 @@ const CountryContainer = styled.div`
 
       h4 {
         margin-bottom: 10px;
+        cursor: pointer;
       }
 
       p {

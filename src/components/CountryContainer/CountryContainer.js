@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
-import Countries from "../Countries/Countries";
+import Countries from "../../pages/Countries/Countries";
 import Filter from "../Filter/Filter";
 import { countriesContext } from "../../CountryContext";
 import Loading from "../Loading/Loading";

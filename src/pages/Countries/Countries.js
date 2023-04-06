@@ -2,10 +2,12 @@
 import { useContext, useEffect, useState } from "react";
 import CountryContainer from "./style";
 import { countriesContext } from "../../CountryContext";
+import { useNavigate } from "react-router-dom";
 
 const Countries = () => {
   const { states } = useContext(countriesContext);
   const [paginatedCountries, setPaginatedCountries] = useState([]);
+  const navigate = useNavigate()
 
   const numFixer = (num) => {
     num = num.toString().split("").reverse().join("");
@@ -30,21 +32,21 @@ const Countries = () => {
     <CountryContainer>
       {paginatedCountries.map((c, i) => (
         <div className="card" key={i}>
-          <div className="flag">
-            <img src={c.flags.svg} alt="country" />
-          </div>
-          <div className="content">
-            <h4>{c.name.common}</h4>
-            <p>
-              Population: <b>{numFixer(c.population)}</b>
-            </p>
-            <p>
-              Region: <b>{c.region}</b>
-            </p>
-            <p>
-              Capital: <b>{c.capital}</b>
-            </p>
-          </div>
+            <div className="flag" onClick={() => navigate(`country/${c.name.common}`)}>
+              <img src={c.flags.svg} alt="country" />
+            </div>
+            <div className="content">
+              <h4 onClick={() => navigate(`country/${c.name.common}`)}>{c.name.common}</h4>
+              <p>
+                Population: <b>{numFixer(c.population)}</b>
+              </p>
+              <p>
+                Region: <b>{c.region}</b>
+              </p>
+              <p>
+                Capital: <b>{c.capital}</b>
+              </p>
+            </div>
         </div>
       ))}
     </CountryContainer>

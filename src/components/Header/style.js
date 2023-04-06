@@ -14,6 +14,10 @@ const Heading = styled.header`
   background-color: white;
   z-index: 999;
 
+  h3 {
+    cursor: pointer;
+  }
+
   button {
     background-color: white;
     border: none;
