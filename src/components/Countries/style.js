@@ -5,7 +5,6 @@ const CountryContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  min-height: 80vh;
   padding-top: 30px;
 
   .card {

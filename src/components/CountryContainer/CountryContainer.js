@@ -12,7 +12,7 @@ const CountryContainer = () => {
 
   const styles = {
     backgroundColor: "#f3f3f3",
-    minHeight: "80vh",
+    minHeight: `calc(100vh - 100px)`,
     marginTop: "100px",
   };
 
@@ -22,8 +22,7 @@ const CountryContainer = () => {
     const getCountries = async () => {
       const response = await axios.get("https://restcountries.com/v3.1/all");
       const resultCountries = response.data.sort(function (first, second) {
-        let A = first.name.common.toLowerCase(),
-          B = second.name.common.toLowerCase();
+        let A = first.name.common.toLowerCase(), B = second.name.common.toLowerCase();
         if (A < B) return -1;
         if (A > B) return 1;
         return 0;
@@ -44,7 +43,7 @@ const CountryContainer = () => {
       setState({ ...states, loading: true });
       const filteredArr = states.tempArr.filter((c) => {
         if (states.filterBy === "" && states.searchText === "") {
-          return [states.countries];
+          return true;
         } else if (states.filterBy === "") {
           return c.name.common.toLowerCase().includes(states.searchText);
         } else if (states.searchText === "") {
@@ -62,9 +61,7 @@ const CountryContainer = () => {
   }, [states.searchText, states.filterBy]);
 
   return (
-    <div
-      style={styles}
-    >
+    <div style={styles}>
       <Filter />
       {!states.loading ? <Countries /> : <Loading />}
       <Pagination />

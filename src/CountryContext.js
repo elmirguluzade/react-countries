@@ -12,8 +12,6 @@ const CountryProvider = ({children}) => {
         currentPage: 1
     })
 
-
-
   return (
     <countriesContext.Provider value={{states, setState}}>
         {children}
