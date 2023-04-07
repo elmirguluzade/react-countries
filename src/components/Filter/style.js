@@ -2,25 +2,21 @@ import styled from "styled-components";
 
 const FilterContainer = styled.div`
   display: flex;
-  padding: 0 5%;
+  padding: 20px 5%;
+  padding-bottom: 0;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   position: relative;
-  position: fixed;
-  top: 60px;
-  width: 100%;
-  background-color: rgb(243, 243, 243);
-  z-index: 999;
 
   input {
     width: 350px;
     height: 35px;
     padding: 5px;
     padding-left: 60px;
-    border: 1px solid #ccc;
+    border: 1px solid ${(props) => (props.darkMode ? "#2B3743" : "white")};
     border-radius: 4px;
+    background-color: ${(props) => (props.darkMode ? "#2B3743" : "white")};
+    color: ${(props) => (props.darkMode ? "white" : "black")};
   }
 
   label {
@@ -30,12 +26,17 @@ const FilterContainer = styled.div`
     align-items: center;
     height: 100%;
     width: 50px;
-    top: 0;
+    top: 10px;
     font-size: 20px;
+    color: ${(props) => (props.darkMode ? "white" : "black")};
   }
 
-  select{
+  select {
     padding: 10px;
+    border-radius: 5px;
+    background-color: ${(props) => (props.darkMode ? "#2B3743" : "white")};
+    border: 1px solid ${(props) => (props.darkMode ? "#2B3743" : "white")};
+    color: ${(props) => (props.darkMode ? "white" : "black")};
   }
 `;
 

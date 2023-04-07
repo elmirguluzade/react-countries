@@ -3,9 +3,9 @@ import SearchBox from '../FilterItems/SearchBox';
 import FilterContainer from './style';
 
 
-const Filter = () => {
+const Filter = ({darkMode}) => {
   return (
-    <FilterContainer>
+    <FilterContainer darkMode={darkMode}>
       <SearchBox/>
       <RegionFilter/>
     </FilterContainer>

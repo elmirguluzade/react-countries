@@ -12,7 +12,7 @@ const Paginate = () => {
   };
 
   return (
-        states.countries.length >= 12 && <PaginationContainer>
+        states.countries.length >= 12 && <PaginationContainer darkMode={states.darkMode}>
         <Pagination
           count={Math.ceil(states.countries.length / 12)}
           color="primary"

@@ -11,9 +11,9 @@ const CountryContainer = () => {
   const { states, setState } = useContext(countriesContext);
 
   const styles = {
-    backgroundColor: "#f3f3f3",
+    backgroundColor: states.darkMode ? "#202D36" :"#f3f3f3",
     minHeight: `calc(100vh - 100px)`,
-    marginTop: "100px",
+    paddingTop: "60px",
   };
 
   // !Paginate
@@ -62,7 +62,7 @@ const CountryContainer = () => {
 
   return (
     <div style={styles}>
-      <Filter />
+      <Filter darkMode={states.darkMode}/>
       {!states.loading ? <Countries /> : <Loading />}
       <Pagination />
     </div>

@@ -8,14 +8,15 @@ const CountryContainer = styled.div`
   padding-top: 30px;
 
   .card {
-    background-color: white;
+    background-color: ${props => props.darkMode ? "#2B3743" : "white" };
+    color: ${(props) => (props.darkMode ? "white" : "black")};
     width: 250px;
     border-radius: 10px;
 
-    .flag{
-        width: 250px;
-        height: 150px;
-        cursor: pointer;
+    .flag {
+      width: 250px;
+      height: 150px;
+      cursor: pointer;
     }
 
     img {

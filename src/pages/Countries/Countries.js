@@ -29,7 +29,7 @@ const Countries = () => {
   }, [states.countries, states.currentPage]);
 
   return (
-    <CountryContainer>
+    <CountryContainer darkMode={states.darkMode}>
       {paginatedCountries.map((c, i) => (
         <div className="card" key={i}>
             <div className="flag" onClick={() => navigate(`country/${c.name.common}`)}>
