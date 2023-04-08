@@ -51,13 +51,13 @@ const Details = ({ country, borderCountry }) => {
           </div>
           <div className="borders">
             <span className="borderHeader">Border Countries: </span>
-             {borderCountry.map((border, i) =>
+             {borderCountry.length > 1 ? borderCountry.map((border, i) =>
                 (
                   <Link to={`/country/${border.name.common}`} key={i}>
                     <span>{border.name.common}</span>
                   </Link>
                 )
-              )}
+              ) : <span>None</span>}
           </div>
         </>
       ) : (
