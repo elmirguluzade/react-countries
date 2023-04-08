@@ -38,6 +38,24 @@ const FilterContainer = styled.div`
     border: 1px solid ${(props) => (props.darkMode ? "#2B3743" : "white")};
     color: ${(props) => (props.darkMode ? "white" : "black")};
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    label {
+      top: -15px;
+      left: 30px;
+    }
+
+    select {
+      width: 100%;
+    }
+  }
 `;
 
 export default FilterContainer;

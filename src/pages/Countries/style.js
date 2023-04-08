@@ -6,9 +6,10 @@ const CountryContainer = styled.div`
   flex-wrap: wrap;
   gap: 40px;
   padding-top: 30px;
+  min-height: calc(100vh - 120px);
 
   .card {
-    background-color: ${props => props.darkMode ? "#2B3743" : "white" };
+    background-color: ${(props) => (props.darkMode ? "#2B3743" : "white")};
     color: ${(props) => (props.darkMode ? "white" : "black")};
     width: 250px;
     border-radius: 10px;
@@ -39,6 +40,29 @@ const CountryContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+
+    .flag {
+      width: auto !important;
+      height: auto !important;
+      cursor: pointer;
+    }
+
+      h4 {
+        margin: 20px 0;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 18px !important;
+        margin: 2px 0;
+      }
+    }
 `;
 
 export default CountryContainer;

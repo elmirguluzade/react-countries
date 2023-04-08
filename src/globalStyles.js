@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
 button {
  cursor: pointer;
 }
+
+.d-flex{
+  display: flex;
+}
 `;
 
 export default GlobalStyle;

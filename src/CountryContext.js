@@ -10,7 +10,7 @@ const CountryProvider = ({children}) => {
         searchText: "",
         filterBy: "",
         currentPage: 1,
-        darkMode: false
+        darkMode: false,
     })
 
   return (

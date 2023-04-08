@@ -6,7 +6,7 @@ const RegionFilter = () => {
   const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   return (
-    <div>
+    <>
       <select onChange={(e) => setState({...states, filterBy: e.target.value})}>
         <option value={""}>Filter by Region</option>
         {regions.map((c, i) => (
@@ -15,7 +15,7 @@ const RegionFilter = () => {
           </option>
         ))}
       </select>
-    </div>
+    </>
   );
 };
 
