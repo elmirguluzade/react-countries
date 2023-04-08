@@ -6,7 +6,7 @@ const BackButton = () => {
 
   return (
     <div>
-      <button onClick={() => navigate("/")}>
+      <button onClick={() => navigate(-1)}>
         <BiArrowBack />
         Back
       </button>

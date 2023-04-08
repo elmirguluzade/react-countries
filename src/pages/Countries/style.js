@@ -4,6 +4,7 @@ const CountryContainer = styled.div`
   padding: 0 5%;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 40px;
   padding-top: 30px;
   min-height: calc(100vh - 120px);
