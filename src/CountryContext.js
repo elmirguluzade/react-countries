@@ -10,8 +10,10 @@ const CountryProvider = ({children}) => {
         searchText: "",
         filterBy: "",
         currentPage: 1,
-        darkMode: false,
+        darkMode: localStorage.getItem('darkMode') === "true",
     })
+
+    console.log(states);
 
   return (
     <countriesContext.Provider value={{states, setState}}>
