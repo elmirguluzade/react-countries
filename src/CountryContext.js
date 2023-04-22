@@ -13,8 +13,6 @@ const CountryProvider = ({children}) => {
         darkMode: localStorage.getItem('darkMode') === "true",
     })
 
-    console.log(states);
-
   return (
     <countriesContext.Provider value={{states, setState}}>
         {children}

@@ -45,13 +45,13 @@ const CountryContainer = () => {
         if (states.filterBy === "" && states.searchText === "") {
           return true;
         } else if (states.filterBy === "") {
-          return c.name.common.toLowerCase().includes(states.searchText);
+          return c.name.common.toLowerCase().includes(states.searchText.toLowerCase());
         } else if (states.searchText === "") {
           return c.region.includes(states.filterBy);
         } else {
           return (
             c.region.includes(states.filterBy) &&
-            c.name.common.toLowerCase().includes(states.searchText)
+            c.name.common.toLowerCase().includes(states.searchText.toLowerCase())
           );
         }
       });
